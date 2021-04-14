@@ -12,5 +12,9 @@ class BasicItemUpdater extends ItemUpdaterAbstract
         if ($this->getItem()->quality > 0) {
             $this->getItem()->quality--;
         }
+
+        if ($this->getItem()->quality > 0 && $this->getItem()->sellIn < 1) {
+            $this->getItem()->quality--;
+        }
     }
 }

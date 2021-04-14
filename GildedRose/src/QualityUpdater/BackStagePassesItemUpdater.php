@@ -10,7 +10,7 @@ class BackStagePassesItemUpdater extends ItemUpdaterAbstract
     public function updateQuality(): void
     {
         //Après le concert, le produit n'a plus de qualité
-        if ($this->getItem()->sellIn < 0) {
+        if ($this->getItem()->sellIn < 1) {
             $this->getItem()->quality = 0;
             return;
         }
